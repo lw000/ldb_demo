@@ -1,6 +1,8 @@
 #pragma once
 
 #include <leveldb/db.h>
+#include <leveldb/comparator.h>
+#include <leveldb/cache.h>
 
 class Ldb
 {
