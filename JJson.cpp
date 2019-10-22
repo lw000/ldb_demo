@@ -22,6 +22,7 @@ void JJson::Test() {
 	j["account"]["name"] = "levi";
 	j["account"]["age"] = 10;
 	j["account"]["sex"] = true;
+	j["account"]["address"] = u8"深圳市南山区";
 	j["list"] = { 0,1,2,3,4,5,6,7,8,9 };
 	std::string s = j.dump();
 	std::cout << s << std::endl;
@@ -46,12 +47,14 @@ void JJson::Test() {
 		std::string s2 = j.dump(4);
 		std::cout << s2 << std::endl;
 	}
+
 	{
 		std::vector<int> lst = { 1,2,3,4,5,6,7,8,9 };
 		nlohmann::json jj(lst);
 		std::string s2 = jj.dump(4);
 		std::cout << s2 << std::endl;
 	}
+
 	{
 		nlohmann::json jj = R"({"compact": true, "schema": 0})"_json;
 		std::vector<std::uint8_t> v_bson = nlohmann::json::to_bson(jj);
@@ -59,6 +62,7 @@ void JJson::Test() {
 			std::cout << v << " ";
 		}
 	}
+
 	{
 		std::string sss = u8"(李伟)";
 		std::cout << sss << std::endl;
