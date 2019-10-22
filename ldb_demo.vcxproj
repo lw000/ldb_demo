@@ -155,11 +155,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="JJrocksdb.h" />
+    <ClInclude Include="JJson.h" />
     <ClInclude Include="Ldb.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="JJrocksdb.cpp" />
+    <ClCompile Include="JJson.cpp" />
     <ClCompile Include="Ldb.cpp" />
     <ClCompile Include="ldb_demo.cpp" />
     <ClCompile Include="pch.cpp">

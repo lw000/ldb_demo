@@ -27,6 +27,9 @@
     <ClInclude Include="JJrocksdb.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="JJson.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -39,6 +42,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="JJrocksdb.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="JJson.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

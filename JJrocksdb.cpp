@@ -1,4 +1,5 @@
 #include "JJrocksdb.h"
+#include <iostream>
 
 static std::string kPath = "/tmp";
 
@@ -28,5 +29,13 @@ bool JJrocksdb::Open() {
 }
 
 void JJrocksdb::Test() {
+	rocksdb::Status s;
+	s = this->db->Put(rocksdb::WriteOptions(), "key", "111111111111111");
+	assert(s.ok());
 
+	std::string v;
+	s = this->db->Get(rocksdb::ReadOptions(), "key", &v);
+	assert(s.ok());
+
+	std::cout << v << std::endl;
 }
